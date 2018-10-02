@@ -1,6 +1,7 @@
 package ru.yantsen.telegrambots.configuration;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -15,13 +16,29 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = "ru.yantsen.telegrambots.repository")
 public class DataConfiguration {
 
+    @Value("${datasource.driverClassName}")
+    private String driverClassName;
+
+    @Value("${datasource.url}")
+    private String url;
+
+    @Value("${datasource.username}")
+    private String username;
+
+    @Value("${datasource.password}")
+    private String password;
+
+    @Value("${datasource.url}")
+    private String data;
+
+
     @Bean
     public DriverManagerDataSource botDataSourse () {
         DriverManagerDataSource dataSourse = new DriverManagerDataSource();
-        dataSourse.setDriverClassName("org.h2.Driver");
-        dataSourse.setUrl("jdbc:h2:./data/botdb;AUTO_SERVER=TRUE");
-        dataSourse.setUsername("sa");
-        dataSourse.setPassword("");
+        dataSourse.setDriverClassName(driverClassName);
+        dataSourse.setUrl(url);
+        dataSourse.setUsername(username);
+        dataSourse.setPassword(password);
         return dataSourse;
     }
 
@@ -33,8 +50,11 @@ public class DataConfiguration {
         emFactory.setPersistenceProviderClass(HibernatePersistenceProvider.class);
         emFactory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         Properties jpaProperties = new Properties();
-        jpaProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+        jpaProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         jpaProperties.setProperty("hibernate.hbm2ddl.auto", "update");
+        jpaProperties.setProperty("hibernate.default_schema", "BOT");
+        jpaProperties.setProperty("hibernate.show_sql", "false");
+        //hibernate.jdbc.lob.non_contextual_creation=true
         emFactory.setJpaProperties(jpaProperties);
         emFactory.setPackagesToScan("ru.yantsen.telegrambots.entity");
         return emFactory;

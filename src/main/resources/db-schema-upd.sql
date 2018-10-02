@@ -2,12 +2,12 @@ insert into BOT.DRIVERS (NAME, PHONE_NUMBER, USER_ID) values ('Петров Ив
 insert into BOT.DRIVERS (NAME, PHONE_NUMBER, USER_ID) values ('Иванов Михаил' , '89893743214', 111111111);
 insert into BOT.DRIVERS (NAME, PHONE_NUMBER, USER_ID) values ('Сидоров Евгений' , '896035331313', 222222222);
 
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0001', 'Кукушкин', 'Москва, Скорняжный переулок, 3с2, кв 8', 'NEW');
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0002', 'Петросян', 'Москва, улица Большая Ордынка, 16, кв 55', 'NEW');
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0003', 'Говорухин', 'Москва, проспект Мира, 15, кв 32', 'NEW');
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0004', 'Тараторкин', 'Москва, Утренняя улица, 3, кв 656', 'NEW');
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0005', 'Кузнецов', 'Москва, улица Металлургов, 5, кв 23', 'COMPLETE');
-insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0006', 'Сибиряков', 'Москва, Новогиреевская улица, 8к1, кв 3', 'NEW');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0001', 'Кукушкин', 'Москва, Скорняжный переулок, 3с2, кв 8', 'ACCEPTED');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0002', 'Петросян', 'Москва, улица Большая Ордынка, 16, кв 55', 'ACCEPTED');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0003', 'Говорухин', 'Москва, проспект Мира, 15, кв 32', 'ACCEPTED');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0004', 'Тараторкин', 'Москва, Утренняя улица, 3, кв 656', 'ACCEPTED');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0005', 'Кузнецов', 'Москва, улица Металлургов, 5, кв 23', 'COMPLETED');
+insert into BOT.ORDERS (ORDER_NUMBER, CLIENT_NAME, CLIENT_ADDRESS, ORDER_STATUS) values ('or_0006', 'Сибиряков', 'Москва, Новогиреевская улица, 8к1, кв 3', 'ACCEPTED');
 
 insert into BOT.PRODUCTS (MODEL) values ('Чайник Fissman "Sunflower", со свистком, 3 л');
 insert into BOT.PRODUCTS (MODEL) values ('LEGO City Arctic Expedition Конструктор Передвижная арктическая база');
