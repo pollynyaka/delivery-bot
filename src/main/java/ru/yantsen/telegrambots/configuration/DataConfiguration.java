@@ -54,7 +54,7 @@ public class DataConfiguration {
         jpaProperties.setProperty("hibernate.hbm2ddl.auto", "update");
         jpaProperties.setProperty("hibernate.default_schema", "BOT");
         jpaProperties.setProperty("hibernate.show_sql", "false");
-        //hibernate.jdbc.lob.non_contextual_creation=true
+        jpaProperties.setProperty("hibernate.jdbc.lob.non_contextual_creation", "true");
         emFactory.setJpaProperties(jpaProperties);
         emFactory.setPackagesToScan("ru.yantsen.telegrambots.entity");
         return emFactory;

@@ -62,6 +62,8 @@ public class BotConfiguration {
             System.out.println("Bot created");
         } catch (TelegramApiRequestException e) {
             e.printStackTrace();
+            System.out.println("ERROR: Failed to register delivery bot. Application is closed.");
+            System.exit(1);
         }
         return bot;
     }
