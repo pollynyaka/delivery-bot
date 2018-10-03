@@ -5,13 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>DeliveryBot</groupId>
-    <artifactId>DeliveryBot</artifactId>
+    <artifactId>delivery-bot</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!--<packaging>war</packaging>-->
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
         <tomcat.version>9.0.12</tomcat.version>
+        <start-class>ru.yantsen.telegrambots.ApplicationStart</start-class>
     </properties>
 
     <parent>
@@ -56,6 +57,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -76,6 +78,7 @@
     </dependencies>
 
     <build>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
