@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "Products", schema = "Bot")
+@Table(name = "Products")
 public class Product {
 
     @Id

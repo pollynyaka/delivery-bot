@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
-@Table(name = "Orders", schema = "Bot")
+@Table(name = "Orders")
 public class Order {
 
     @Id

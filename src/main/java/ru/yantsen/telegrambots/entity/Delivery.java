@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
-@Table(name = "Deliveries", schema = "Bot")
+@Table(name = "Deliveries")
 public class Delivery {
 
     @Id

@@ -3,7 +3,7 @@ package ru.yantsen.telegrambots.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "OrderItems", schema = "Bot")
+@Table(name = "OrderItems")
 public class OrderItem {
 
     @Id
