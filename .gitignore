@@ -1,4 +1,7 @@
 .idea/
 .vagrant/
+logs/
 
 *.log
+
+/conf/telegram_bot.properties

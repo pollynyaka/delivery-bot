@@ -15,12 +15,12 @@ public class MainDeliveryBotController {
 
     @GetMapping("/")
     public String showBotName() {
-        return "Telegram delivery bot name = " + botUsername;
+        return "Telegram delivery bot = " + botUsername;
     }
 
     @RequestMapping("/{word}")
     String hello(@PathVariable String word) {
-        return "\"" + word + "\" - that's funny";
+        return "\"" + word + "\" - that's funny!";
     }
 
 

@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
       apt-get -y install htop vim
 
       #####
-      # Install Docker CE - https://docs.docker.com/install/linux/docker-ce/ubuntu/
+      # https://docs.docker.com/install/linux/docker-ce/ubuntu/
       #####
 
       apt-get -y install \
@@ -48,10 +48,16 @@ Vagrant.configure("2") do |config|
       apt-get -y install docker-ce
 
       #####
-      # Install Docker CE - https://docs.docker.com/install/linux/docker-ce/ubuntu/
+      # https://docs.docker.com/install/linux/docker-ce/ubuntu/
       #####
 
-      docker run --name tdb-postgres -p 5432:5432 -e POSTGRES_PASSWORD=superPassword -d postgres:10.5
+      docker run --name tdb-postgres -d -p 5432:5432 \
+        -e POSTGRES_PASSWORD=superPassword postgres:10.5
+
+      docker build /vagrant/ -t delivery-bot:0.1
+
+      docker run --name tdb-app -d -p 8080:8080 \
+        -v /vagrant/logs:/usr/local/tomcat/logs delivery-bot:0.1
 
     SHELL
   end

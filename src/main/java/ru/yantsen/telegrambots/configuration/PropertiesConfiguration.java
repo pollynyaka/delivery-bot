@@ -24,8 +24,8 @@ public class PropertiesConfiguration implements EnvironmentAware {
 
         final List<Resource> resourceLst = new ArrayList<Resource>();
         resourceLst.add(new ClassPathResource("proxy.properties"));
+        resourceLst.add(new ClassPathResource("application.properties"));
         resourceLst.add(new FileSystemResource(environment.getProperty("BOT_CONFIG_HOME")));
-        resourceLst.add(new FileSystemResource(environment.getProperty("BOT_DATA_CONFIG_HOME")));
 
         ppc.setLocations(resourceLst.toArray(new Resource[]{}));
 
