@@ -1,5 +1,14 @@
-# delivery-bot
+## Использование Telegram Bot API в Spring Boot Application.
 
-### What You'll need
-- Vagrant
-- Disk space and memory for a VM
+### Для запуска:
+- создайте нового бота с помощью http://telegram.me/BotFather;
+- сохраните файл telegram_bot.properties.sample как telegram_bot.properties, указав в нем атрибуты созданного бота. Путь к конфигурации бота вынесите в переменную окружения.
+
+### Проект можно развернуть локально, для этого нужно:
+- установить VirtualBox и Vagrant;
+- из корня проекта выполнить
+```
+vagrant up
+```
+При развертывании будет создана виртуальная машина, в которой будет установлен Docker, и будут запущены 2 Docker-контейнера (один с СУБД PostgreSql v10.5, второй - с Tomcat v8.5 и задеплоиным war файлом).
+Параметры доступа смотрите в Vagrantfile.
