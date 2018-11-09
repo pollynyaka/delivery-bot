@@ -28,15 +28,24 @@ import java.util.List;
 @Service
 public class MessageProcessingImp implements MessageProcessing {
 
-    @Autowired
     private DriverService driverService;
-
-    @Autowired
     private DeliveryService deliveryService;
-
-    @Autowired
     private CallbackQueryService callbackQueryService;
 
+    @Autowired
+    public void setDriverService(DriverService driverService) {
+        this.driverService = driverService;
+    }
+
+    @Autowired
+    public void setDeliveryService(DeliveryService deliveryService) {
+        this.deliveryService = deliveryService;
+    }
+
+    @Autowired
+    public void setCallbackQueryService(CallbackQueryService callbackQueryService) {
+        this.callbackQueryService = callbackQueryService;
+    }
 
 
     @Override

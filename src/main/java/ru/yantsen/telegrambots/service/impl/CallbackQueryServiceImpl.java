@@ -20,11 +20,21 @@ import java.io.IOException;
 @Service
 public class CallbackQueryServiceImpl implements CallbackQueryService {
 
-    @Autowired
     private DeliveryService deliveryService;
+    private BotCallbackQuery query;
+
 
     @Autowired
-    BotCallbackQuery query;
+    public void setDeliveryService(DeliveryService deliveryService) {
+        this.deliveryService = deliveryService;
+    }
+
+
+    @Autowired
+    public void setBotCallbackQuery(BotCallbackQuery query) {
+        this.query = query;
+    }
+
 
     @Override
     public String parseData(Update update) throws BotMessageException, IOException {
@@ -67,8 +77,6 @@ public class CallbackQueryServiceImpl implements CallbackQueryService {
         query.setActionType(actionType);
         return objectMapper.writeValueAsString(query);
     }
-
-
 
 
 }

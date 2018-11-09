@@ -19,8 +19,13 @@ import static ru.yantsen.telegrambots.model.Constants.formatter;
 @Service
 public class DeliveryServiceImpl implements DeliveryService {
 
-    @Autowired
     private DeliveryRepository deliveryRepository;
+
+
+    @Autowired
+    public void setDeliveryRepository(DeliveryRepository deliveryRepository) {
+        this.deliveryRepository = deliveryRepository;
+    }
 
 
     @Override

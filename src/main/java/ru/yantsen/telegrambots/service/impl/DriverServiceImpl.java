@@ -9,8 +9,13 @@ import ru.yantsen.telegrambots.service.DriverService;
 @Service
 public class DriverServiceImpl implements DriverService {
 
-    @Autowired
     private DriverRepository driverRepository;
+
+
+    @Autowired
+    public void setDriverRepository(DriverRepository driverRepository) {
+        this.driverRepository = driverRepository;
+    }
 
 
     @Override
